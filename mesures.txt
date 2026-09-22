@@ -1,0 +1,137 @@
+--- Métricas Almacenamiento Texto [P0] (10 chunks de tamaño 1000) ---
+    Mínimo:         0.007889 s
+    Máximo:         0.012536 s
+    Promedio:       0.009424 s
+    Desv. Estándar: 0.001615 s
+--- Métricas Almacenamiento Texto [P0] (10 chunks de tamaño 1000) ---
+    Mínimo:         0.006389 s
+    Máximo:         0.014454 s
+    Promedio:       0.008924 s
+    Desv. Estándar: 0.002243 s
+--- Métricas Almacenamiento Texto [P0] (10 chunks de tamaño 1000) ---
+    Mínimo:         0.008004 s
+    Máximo:         0.014594 s
+    Promedio:       0.010315 s
+    Desv. Estándar: 0.001961 s
+
+
+--- Métricas Almacenamiento Embeddings [P1] (10 chunks de tamaño 1000) ---
+    Mínimo:         1.541492 s
+    Máximo:         2.533884 s
+    Promedio:       2.289192 s
+    Desv. Estándar: 0.336803 s
+--- Métricas Almacenamiento Embeddings [P1] (10 chunks de tamaño 1000) ---
+    Mínimo:         1.509015 s
+    Máximo:         2.552769 s
+    Promedio:       2.160274 s
+    Desv. Estándar: 0.355199 s
+--- Métricas Almacenamiento Embeddings [P1] (10 chunks de tamaño 1000) ---
+    Mínimo:         1.517819 s
+    Máximo:         3.385457 s
+    Promedio:       2.529062 s
+    Desv. Estándar: 0.677493 s
+
+=== [P2] Benchmark de Consultas Vectoriales en PostgreSQL ===
+    Cargadas 10 oraciones de prueba para el benchmark.
+        Oración: usually , he would be tearing around the living room , playing with his toys .
+        Oración: but just one look at a minion sent him practically catatonic .
+        Oración: that had been megan 's plan when she got him dressed earlier .
+        Oración: he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+        Oración: she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+        Oración: `` are n't you being a good boy ? ''
+        Oración: mason barely acknowledged her .
+        Oración: instead , his baby blues remained focused on the television .
+        Oración: since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+
+    --- 1. Búsqueda Top-2 por Distancia Euclídea (L2) ---
+    Resultados de la primera consulta (L2):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Distancia L2: 0.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Distancia L2: 0.8000
+
+    --- 2. Búsqueda Top-2 por Similitud Coseno ---
+    Resultados de la primera consulta (Coseno):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Similitud Coseno: 1.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Similitud Coseno: 0.6800
+
+    --- Métricas Búsqueda Top-2 [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         0.965589 s
+        Máximo:         2.835721 s
+        Promedio:       2.053896 s
+        Desv. Estándar: 0.685105 s
+
+    --- Métricas Búsqueda Top-2 [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         2.508812 s
+        Máximo:         3.225658 s
+        Promedio:       3.017261 s
+        Desv. Estándar: 0.263194 s
+
+=== [P2] Benchmark de Consultas Vectoriales en PostgreSQL ===
+    Cargadas 10 oraciones de prueba para el benchmark.
+        Oración: usually , he would be tearing around the living room , playing with his toys .
+        Oración: but just one look at a minion sent him practically catatonic .
+        Oración: that had been megan 's plan when she got him dressed earlier .
+        Oración: he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+        Oración: she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+        Oración: `` are n't you being a good boy ? ''
+        Oración: mason barely acknowledged her .
+        Oración: instead , his baby blues remained focused on the television .
+        Oración: since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+   
+    --- 1. Búsqueda Top-2 por Distancia Euclídea (L2) ---
+    Resultados de la primera consulta (L2):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Distancia L2: 0.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Distancia L2: 0.8000
+
+    --- 2. Búsqueda Top-2 por Similitud Coseno ---
+    Resultados de la primera consulta (Coseno):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Similitud Coseno: 1.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Similitud Coseno: 0.6800
+
+    --- Métricas Búsqueda Top-2 [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         1.002436 s
+        Máximo:         2.840594 s
+        Promedio:       2.148711 s
+        Desv. Estándar: 0.737136 s
+
+    --- Métricas Búsqueda Top-2 [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         2.561054 s
+        Máximo:         3.291458 s
+        Promedio:       3.045822 s
+        Desv. Estándar: 0.250428 s
+
+=== [P2] Benchmark de Consultas Vectoriales en PostgreSQL ===
+    Cargadas 10 oraciones de prueba para el benchmark.
+        Oración: usually , he would be tearing around the living room , playing with his toys .
+        Oración: but just one look at a minion sent him practically catatonic .
+        Oración: that had been megan 's plan when she got him dressed earlier .
+        Oración: he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+        Oración: she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+        Oración: `` are n't you being a good boy ? ''
+        Oración: mason barely acknowledged her .
+        Oración: instead , his baby blues remained focused on the television .
+        Oración: since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+    
+    --- 1. Búsqueda Top-2 por Distancia Euclídea (L2) ---
+    Resultados de la primera consulta (L2):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Distancia L2: 0.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Distancia L2: 0.8000
+
+    --- 2. Búsqueda Top-2 por Similitud Coseno ---
+    Resultados de la primera consulta (Coseno):
+        Oración: each time she looked into mason 's face , she was grateful that he looked nothing like his father ., Similitud Coseno: 1.0000
+        Oración: she dreaded the day when mason was old enough to ask about his father ., Similitud Coseno: 0.6800
+
+    --- Métricas Búsqueda Top-2 [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         1.013345 s
+        Máximo:         2.731224 s
+        Promedio:       2.136306 s
+        Desv. Estándar: 0.686881 s
+
+    --- Métricas Búsqueda Top-2 [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         2.406620 s
+        Máximo:         3.298780 s
+        Promedio:       2.896391 s
+        Desv. Estándar: 0.289796 s
