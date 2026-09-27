@@ -272,3 +272,51 @@
         Máximo:         0.006563 s
         Promedio:       0.004759 s
         Desv. Estándar: 0.001253 s
+
+
+
+
+=== [G0] Carga de Texto Plano en PostgreSQL (pgvector) ===
+    Mínimo:         0.007247 s
+    Máximo:         0.020892 s
+    Promedio:       0.010151 s
+    Desv. Estándar: 0.004094 s
+
+=== [G1] Inserción de Embeddings con pgvector ===
+    Mínimo:         0.151245 s
+    Máximo:         0.404667 s
+    Promedio:       0.306801 s
+    Desv. Estándar: 0.108660 s
+
+=== [G2] Benchmark de Consultas Vectoriales con pgvector ===
+    --- 10 Oraciones Seleccionadas para la Búsqueda ---
+    1. usually , he would be tearing around the living room , playing with his toys .
+    2. but just one look at a minion sent him practically catatonic .
+    3. that had been megan 's plan when she got him dressed earlier .
+    4. he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+    5. she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+    6. `` are n't you being a good boy ? ''
+    7. mason barely acknowledged her .
+    8. instead , his baby blues remained focused on the television .
+    9. since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+    10. each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+
+    --- Resultados Top-2 para la última frase (L2 - pgvector) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia L2: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia L2: 0.8000
+
+    --- Resultados Top-2 para la última frase (Coseno - pgvector) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia Coseno: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia Coseno: 0.3200
+
+    --- Métricas Búsqueda Top-2 pgvector [Distancia Euclídea (<->)] (10 oraciones) ---
+        Mínimo:         0.005034 s
+        Máximo:         0.018220 s
+        Promedio:       0.006932 s
+        Desv. Estándar: 0.003999 s
+
+    --- Métricas Búsqueda Top-2 pgvector [Distancia Coseno (<=>)] (10 oraciones) ---
+        Mínimo:         0.004831 s
+        Máximo:         0.006423 s
+        Promedio:       0.005760 s
+        Desv. Estándar: 0.000567 s

@@ -3,6 +3,7 @@
 ## 1. Requisitos previos
   Python 3.10+ instalado.
   PostgreSQL instalado y en ejecución localmente.
+  pgvector instalado para PostgreSQL
 
 ## 2. Configuración del entorno de Python
 Abre tu terminal en la carpeta del proyecto y sigue estos pasos:
