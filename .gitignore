@@ -221,3 +221,6 @@ __marimo__/
 
 # database credentials
 database.ini
+
+# local ChromaDB
+chroma_db/

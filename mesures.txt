@@ -135,3 +135,140 @@
         Máximo:         3.298780 s
         Promedio:       2.896391 s
         Desv. Estándar: 0.289796 s
+
+
+
+=== [C0] Carga de Texto Plano en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         24.763558 s
+    Máximo:         26.645838 s
+    Promedio:       25.272461 s
+    Desv. Estándar: 0.609816 s
+
+=== [C0] Carga de Texto Plano en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         25.769776 s
+    Máximo:         29.911711 s
+    Promedio:       27.251555 s
+    Desv. Estándar: 1.456676 s
+
+=== [C0] Carga de Texto Plano en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         24.909391 s
+    Máximo:         27.433625 s
+    Promedio:       25.899318 s
+    Desv. Estándar: 0.746704 s
+
+=== [C1] Inserción de Embeddings Precalculados en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         0.425565 s
+    Máximo:         0.573167 s
+    Promedio:       0.480818 s
+    Desv. Estándar: 0.050870 s
+
+=== [C1] Inserción de Embeddings Precalculados en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         0.471124 s
+    Máximo:         0.705243 s
+    Promedio:       0.585068 s
+    Desv. Estándar: 0.078092 s
+
+=== [C1] Inserción de Embeddings Precalculados en ChromaDB (10 chunks de tamaño 1000) ===
+    Mínimo:         0.447796 s
+    Máximo:         0.695322 s
+    Promedio:       0.530690 s
+    Desv. Estándar: 0.064629 s
+
+=== [C2] Benchmark de Consultas Vectoriales en ChromaDB ===
+    --- 10 Oraciones Seleccionadas para la Búsqueda ---
+        1. usually , he would be tearing around the living room , playing with his toys .
+        2. but just one look at a minion sent him practically catatonic .
+        3. that had been megan 's plan when she got him dressed earlier .
+        4. he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+        5. she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+        6. `` are n't you being a good boy ? ''
+        7. mason barely acknowledged her .
+        8. instead , his baby blues remained focused on the television .
+        9. since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+        10. each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+
+    --- Resultados Top-2 para la última frase (L2) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia L2: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia L2: 0.6399
+
+    --- Resultados Top-2 para la última frase (Coseno) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia Coseno: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia Coseno: 0.3200
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         0.001087 s
+        Máximo:         0.004062 s
+        Promedio:       0.001528 s
+        Desv. Estándar: 0.000906 s
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         0.004822 s
+        Máximo:         0.015808 s
+        Promedio:       0.007113 s
+        Desv. Estándar: 0.003214 s
+
+=== [C2] Benchmark de Consultas Vectoriales en ChromaDB ===
+    --- 10 Oraciones Seleccionadas para la Búsqueda ---
+    1. usually , he would be tearing around the living room , playing with his toys .
+    2. but just one look at a minion sent him practically catatonic .
+    3. that had been megan 's plan when she got him dressed earlier .
+    4. he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+    5. she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+    6. `` are n't you being a good boy ? ''
+    7. mason barely acknowledged her .
+    8. instead , his baby blues remained focused on the television .
+    9. since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+    10. each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+
+    --- Resultados Top-2 para la última frase (L2) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia L2: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia L2: 0.6399
+
+    --- Resultados Top-2 para la última frase (Coseno) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia Coseno: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia Coseno: 0.3200
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         0.001691 s
+        Máximo:         0.005836 s
+        Promedio:       0.002312 s
+        Desv. Estándar: 0.001250 s
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         0.001098 s
+        Máximo:         0.003911 s
+        Promedio:       0.001579 s
+        Desv. Estándar: 0.000836 s
+
+=== [C2] Benchmark de Consultas Vectoriales en ChromaDB ===
+    --- 10 Oraciones Seleccionadas para la Búsqueda ---
+    1. usually , he would be tearing around the living room , playing with his toys .
+    2. but just one look at a minion sent him practically catatonic .
+    3. that had been megan 's plan when she got him dressed earlier .
+    4. he 'd seen the movie almost by mistake , considering he was a little young for the pg cartoon , but with older cousins , along with her brothers , mason was often exposed to things that were older .
+    5. she liked to think being surrounded by adults and older kids was one reason why he was a such a good talker for his age .
+    6. `` are n't you being a good boy ? ''
+    7. mason barely acknowledged her .
+    8. instead , his baby blues remained focused on the television .
+    9. since the movie was almost over , megan knew she better slip into the bedroom and finish getting ready .
+    10. each time she looked into mason 's face , she was grateful that he looked nothing like his father .
+
+    --- Resultados Top-2 para la última frase (L2) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia L2: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia L2: 0.6399
+
+    --- Resultados Top-2 para la última frase (Coseno) ---
+        -> Coincidencia: "each time she looked into mason 's face , she was grateful that he looked nothing like his father ." | Distancia Coseno: 0.0000
+        -> Coincidencia: "she dreaded the day when mason was old enough to ask about his father ." | Distancia Coseno: 0.3200
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Distancia Euclídea (L2)] (10 oraciones) ---
+        Mínimo:         0.001291 s
+        Máximo:         0.003851 s
+        Promedio:       0.001938 s
+        Desv. Estándar: 0.000904 s
+
+    --- Métricas Búsqueda Top-2 ChromaDB [Similitud Coseno] (10 oraciones) ---
+        Mínimo:         0.002934 s
+        Máximo:         0.006563 s
+        Promedio:       0.004759 s
+        Desv. Estándar: 0.001253 s
